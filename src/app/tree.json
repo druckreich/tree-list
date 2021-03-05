@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Fichte",
+    "age": 120,
+    "typ": "Nadelbaum",
+    "height": 30
+  },
+  {
+    "name": "Eiche",
+    "age": 300,
+    "typ": "Laubbaum",
+    "height": 28
+  },
+  {
+    "name": "Buche",
+    "age": 400,
+    "typ": "Laubbaum",
+    "height": 40
+  },
+  {
+    "name": "Ahorn",
+    "age": 260,
+    "typ": "Laubbaum",
+    "height": 50
+  },
+  {
+    "name": "Weide",
+    "age": 600,
+    "typ": "Laubbaum",
+    "height": 19
+  },
+  {
+    "name": "Japanische Zierkirsche",
+    "age": 90,
+    "typ": "Laubbaum",
+    "height": 11
+  }
+]
