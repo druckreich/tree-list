@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 interface treeServiceResponse {
@@ -57,13 +58,21 @@ const dummy = [
 })
 export class TreeService {
 
-	constructor(private http: HttpClient) { }
+	constructor(private http: HttpClient) {
+
+	}
 
 	fetchTrees() {
-		console.log('fetch')
-		// const response = this.http.get<treeServiceResponse>('src/app/tree.json')
-		// console.log('response', response)
-		const response = [...dummy]
-		return response
+		console.log('fetch');
+		const response = this.http.get<treeServiceResponse>('http://127.0.0.1:4200/app/tree.json', {
+			params: {
+				action: 'query',
+				format: 'json'
+			}
+		});
+		// this.getJSON('./tree.json')
+		// const response = [...dummy]
+		console.log('response', response);
+		return response;
 	}
 }

@@ -16,15 +16,16 @@ export class TreeViewComponent implements OnInit {
 
 	getTrees() {
 		console.log('getTrees')
+
 		/*
-			this.treeFile.fetchTrees().subscribe(response => {
+		this.treeFile.fetchTrees().subscribe(response => {
 			console.log('response', response);
-			this.trees = response
+			// this.trees = response
 		}); */
 
-		console.log('trees', this.trees)
-		this.trees = this.treeFile.fetchTrees()
-		console.log('trees', this.trees)
+		// console.log('trees', this.trees)
+		const tree = this.treeFile.fetchTrees().subscribe(response => console.log('response', response))
+		console.log('trees', tree)
 	}
 
 }
