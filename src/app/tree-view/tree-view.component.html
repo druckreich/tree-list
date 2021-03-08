@@ -1,4 +1,7 @@
 <div>
-	<h1>Different Trees in Vienna</h1>
+	<h1>Different Trees in Austria</h1>
 	<button (click)='getTrees()'>Load</button>
+	<ul *ngIf='trees.length > 0'>
+		<li *ngFor='let tree of trees'>{{ tree.name }}</li>
+	</ul>
 </div>
