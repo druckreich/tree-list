@@ -64,14 +64,15 @@ export class TreeService {
 
 	fetchTrees() {
 		console.log('fetch');
+		/* 1/2
 		const response = this.http.get<treeServiceResponse>('http://127.0.0.1:4200/app/tree.json', {
 			params: {
 				action: 'query',
 				format: 'json'
 			}
-		});
-		// this.getJSON('./tree.json')
-		// const response = [...dummy]
+		}); */
+
+		const response = [...dummy]
 		console.log('response', response);
 		return response;
 	}

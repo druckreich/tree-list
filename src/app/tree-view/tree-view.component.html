@@ -1,7 +1,7 @@
 <div>
 	<h1>Different Trees in Austria</h1>
 	<button (click)='getTrees()'>Load</button>
-	<ul *ngIf='trees.length > 0'>
-		<li *ngFor='let tree of trees'>{{ tree.name }}</li>
-	</ul>
+	<mat-list *ngIf='trees.length > 0'>
+		<mat-list-item *ngFor='let tree of trees'>{{ tree.name }}</mat-list-item>
+	</mat-list>
 </div>
