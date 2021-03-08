@@ -1,18 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Tree } from './tree.model';
 
-
-interface treeServiceResponse {
-	trees: [
-		{
-			name: string,
-			age: number,
-			typ: string,
-			height: number
-		}
-	]
-}
 
 @Injectable({
 	providedIn: 'root'
@@ -21,8 +10,10 @@ export class TreeService {
 
 	constructor(private http: HttpClient) { }
 
+	trees: Tree[] = []; 
+
 	fetchTrees() {
-		const response = this.http.get<treeServiceResponse>('http://127.0.0.1:4200/assets/tree.json');
+		const response = this.http.get<Tree>('http://127.0.0.1:4200/assets/tree.json');
 
 		return response;
 	};

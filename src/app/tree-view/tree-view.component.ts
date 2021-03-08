@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TreeService } from './../tree.service';
+import { Tree } from '../tree.model';
 
 @Component({
 	selector: 'app-tree-view',
@@ -15,7 +16,8 @@ export class TreeViewComponent implements OnInit {
 	}
 
 	getTrees() {
-		this.treeFile.fetchTrees().subscribe(response => this.trees = response);
+		let data;
+		this.treeFile.fetchTrees().subscribe(data => this.trees = data);
 	};
 
 	onEdit(tree) {
