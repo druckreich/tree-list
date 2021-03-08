@@ -9,30 +9,18 @@ import { TreeService } from './../tree.service';
 export class TreeViewComponent implements OnInit {
 
 	constructor(private treeFile: TreeService) { }
-	trees = [];
+	trees;
 
 	ngOnInit(): void {
 	}
 
 	getTrees() {
-		console.log('getTrees');
-
-		/* 1.
-			this.treeFile.fetchTrees().subscribe(response => {
-				console.log('response', response);
-				// this.trees = response
-			}); */
-
-		/* 2.
-			console.log('trees', this.trees)
-			const tree = this.treeFile.fetchTrees().subscribe(response => console.log('response', response))
-			console.log('trees', tree) */
-
-		// dummy data
-		this.trees = this.treeFile.fetchTrees();
+		this.treeFile.fetchTrees().subscribe(response => this.trees = response);
 	};
 
-	onEdit(index) {
-		console.log('edit', index);
+	onEdit(tree) {
+		console.log('edit', tree);
+
+		// ToDo
 	};
 }

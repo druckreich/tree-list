@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
 		BrowserAnimationsModule,
 		MatCardModule,
 		MatListModule,
-		MatButtonModule
+		MatButtonModule,
+		MatDialogModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
