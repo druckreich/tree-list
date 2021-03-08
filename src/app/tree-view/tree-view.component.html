@@ -1,7 +1,14 @@
-<div>
-	<h1>Different Trees in Austria</h1>
-	<button (click)='getTrees()'>Load</button>
+<mat-card>
+	<mat-card-title>Different Trees in Austria</mat-card-title>
+	<button mat-raised-button (click)='getTrees()'>Load</button>
 	<mat-list *ngIf='trees.length > 0'>
-		<mat-list-item *ngFor='let tree of trees'>{{ tree.name }}</mat-list-item>
+		<mat-list-item *ngFor='let tree of trees'>
+
+			<h2>{{ tree.name }}</h2>
+			<div>
+				
+			</div>
+			<mat-divider></mat-divider>
+		</mat-list-item>
 	</mat-list>
-</div>
+</mat-card>
