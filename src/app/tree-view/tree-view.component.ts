@@ -15,7 +15,7 @@ export class TreeViewComponent implements OnInit {
 	}
 
 	getTrees() {
-		console.log('getTrees')
+		console.log('getTrees');
 
 		/* 1.
 			this.treeFile.fetchTrees().subscribe(response => {
@@ -29,6 +29,10 @@ export class TreeViewComponent implements OnInit {
 			console.log('trees', tree) */
 
 		// dummy data
-		this.trees = this.treeFile.fetchTrees()
-	}
+		this.trees = this.treeFile.fetchTrees();
+	};
+
+	onEdit(index) {
+		console.log('edit', index);
+	};
 }

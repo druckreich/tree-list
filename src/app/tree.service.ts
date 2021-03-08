@@ -72,8 +72,8 @@ export class TreeService {
 			}
 		}); */
 
-		const response = [...dummy]
+		const response = [...dummy];
 		console.log('response', response);
 		return response;
-	}
+	};
 }
